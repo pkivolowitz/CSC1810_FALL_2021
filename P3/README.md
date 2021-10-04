@@ -128,6 +128,19 @@ will print:
 x Jones
 ```
 
+## You must ensure a line has enough data
+
+What would happen if you executed this example code on an empty string?
+
+```c++
+string s;
+cout << s.at(0) << " " << s.substr(1) << endl;
+```
+
+**You must correctly skip empty lines and lines with just one character.**
+
+The data file I provided above does not have any *bad* lines, but I *will* test your program with bad lines.
+
 ## Appending something to a `vector`
 
 Use `push_back()` as described in zybooks 5.7.
