@@ -51,10 +51,10 @@ using namespace std;
 
 	Parameters:
 	vector<int> &		A reference to the vector of int to create
-	const int			How many ints to add to the vector
-	const int			The largest random value to include i.e.
-						use this value along with '%' to limit the
-						range of random numbers.
+	const int		How many ints to add to the vector
+	const int		The largest random value to include i.e.
+				use this value along with '%' to limit the
+				range of random numbers.
 
 	Returns:
 	void				No return value
