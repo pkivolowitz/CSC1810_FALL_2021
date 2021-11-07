@@ -148,14 +148,14 @@ Because this isn't a physics class, you will be given the code for this.
 ```c++
 struct Tank
 {
-	Tank(int min_pos, int max_pos, string id);		// Constructor.
-	int GetPosition();								// Getter - returns position.
-	int MovePosition(bool go_left);					// Moves tank left or right.
-	int GetHealth();								// Getter - returns health.
-	bool ChangeHealth();							// Deducts 1/2 health.
+	Tank(int min_pos, int max_pos, string id);	// Constructor.
+	int GetPosition();				// Getter - returns position.
+	int MovePosition(bool go_left);			// Moves tank left or right.
+	int GetHealth();				// Getter - returns health.
+	bool ChangeHealth();				// Deducts 1/2 health.
 	int Fire(int target_position, double power);	// Code is provided for this method.
-	string GetStatus();								// Getter - builds and returns status.
-	string GetID();									// Getter - returns tank_id.
+	string GetStatus();				// Getter - builds and returns status.
+	string GetID();					// Getter - returns tank_id.
 
 private:
 	string tank_id;
