@@ -148,14 +148,14 @@ Because this isn't a physics class, you will be given the code for this.
 ```c++
 struct Tank
 {
-	Tank(int min_pos, int max_pos, string id);
-	int GetPosition();
-	int MovePosition(bool go_left);
-	int GetHealth();
-	bool ChangeHealth();
-	int Fire(int target_position, double power);
-	string GetStatus();
-	string GetID();
+	Tank(int min_pos, int max_pos, string id);		// Constructor.
+	int GetPosition();								// Getter - returns position.
+	int MovePosition(bool go_left);					// Moves tank left or right.
+	int GetHealth();								// Getter - returns health.
+	bool ChangeHealth();							// Deducts 1/2 health.
+	int Fire(int target_position, double power);	// Code is provided for this method.
+	string GetStatus();								// Getter - builds and returns status.
+	string GetID();									// Getter - returns tank_id.
 
 private:
 	string tank_id;
@@ -270,16 +270,18 @@ This getter simply returns the `id` of the tank.
 ```c++
 const int WIDTH = 100;					// There are this many spaces on the ground.
 const int MAX_HEALTH = 10;				// Full health.
-const int HALF_HEALTH = MAX_HEALTH / 2; // Lose half your health with a near miss.
+const int HALF_HEALTH = MAX_HEALTH / 2; 		// Lose half your health with a near miss.
 const int MAX_MOVEMENT = 5;				// At full health, this is the most you can move (+1)
 const int MIN_POWER = 1;				// Minimum power.
 const int MAX_POWER = 15;				// Maximum power.
-const int POSITIONS_PER_LINE = 8;		// This many position updates per line.
+const int POSITIONS_PER_LINE = 8;			// This many position updates per line.
 const double SUBSTEPS = 4;				// Each unit of time is further divided by this.
 const double GRAVITY = 1;				// The force of gravity applied per step.
 ```
 
 The above constants give names and therefore associated meanings or purposes to what otherwise would be *magic numbers*.
+
+If the user inputs a power (`f` or `F`) that is out of bounds, ignore the fire command. The current player does NOT lose their turn.
 
 ## BE SMART ABOUT TAKING TURNS!
 
