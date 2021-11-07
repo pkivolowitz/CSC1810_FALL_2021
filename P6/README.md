@@ -16,6 +16,8 @@ The idea is that two tanks take turns firing at each other. Shots follow ballist
 
 ## Sample Game
 
+Most of this specification's length is due to this section despite it being nothing more than a sample of the output of the game.
+
 ```text
 Louie Position:   6 Health:  10 --- Ralph Position:  75 Health:  10
 Tank: Louie Command (M, F, Q): 
